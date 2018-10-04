@@ -1,0 +1,22 @@
+<div class="app" (keypress)="keyPress($event)" tabindex="1" (focus)="showWarning = false" (blur)="showWarning = true">
+  <div class="container content">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="image">
+          <img src="assets/images/DSC_0110.JPG"/>
+        </div>
+        <div class="buttons">
+          <button type="button" class="btn btn-success" (click)="saveResult(1)">Хорошо</button>
+          <button class="btn btn-warning" (click)="saveResult(0)">Доразметить</button>
+          <button class="btn btn-danger" (click)="saveResult(-1)">Плохо</button>
+        </div>
+        <div class="alert alert-warning" *ngIf="showWarning">Чтобы управление с клавиатуры работало, кликни в любое
+          место
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
